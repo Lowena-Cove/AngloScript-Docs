@@ -1,6 +1,6 @@
-# **AngloScript Documentation**
+# AngloScript Full Documentation
 
-**Version 1.3**  
+**Version 1.4**  
 **Author:** AngloScript Development Team  
 **Last Updated:** December 2024  
 
@@ -8,9 +8,9 @@
 
 ## **Table of Contents**
 
-1. Overview  
-2. Key Features  
-3. Syntax  
+1. [Overview](#1-overview)  
+2. [Key Features](#2-key-features)  
+3. [Syntax](#3-syntax)  
    - Basic Program Structure  
    - Comments  
    - Declarations  
@@ -23,166 +23,301 @@
    - Error Handling  
    - External Code Integration  
    - Built-in Modules  
-4. Keywords Reference  
-5. Module Types  
-6. AngloScript and Other Languages  
+4. [Keywords Reference](#4-keywords-reference)  
+5. [Module Types](#5-module-types)  
+6. [AngloScript and Other Languages](#6-angloscript-and-other-languages)  
    - Comparison to Python  
    - Comparison to Assembly  
    - Comparison to BASIC  
-7. Interpreting and Running Code  
+7. [Interpreting and Running Code](#7-interpreting-and-running-code)  
    - Compilable and Non-Compilable Nature  
    - JIT Compatibility  
-8. Advanced Features Explained  
+8. [Advanced Features Explained](#8-advanced-features-explained)  
    - Event-Driven Programming  
-   - Cross-Language Translatability  
-   - Dynamic Typing and Type Inference  
-   - Error Handling with Built-in Retry Logic  
    - Multi-Threading and Asynchronous Processing  
-   - Inline Scripting and Embedded Code Blocks  
-   - Data Structures: Lists, Maps, and Trees  
-   - Built-in Game Development Tools  
-   - Advanced String Manipulation  
-   - System-Level Programming Features  
-9. Example Code  
-10. Features from Holy C, Python, and BASIC  
-11. AngloScript’s Unique Flexibility  
-12. Future Directions  
+9. [Example Code](#9-example-code)  
+10. [Features from Holy C, Python, and BASIC](#10-features-from-holy-c-python-and-basic)  
+11. [AngloScript’s Unique Flexibility](#11-angloscripts-unique-flexibility)  
+12. [Future Directions](#12-future-directions)  
 
 ---
 
 ## **1. Overview**
 
-AngloScript is a high-level programming language built with the vision of balancing simplicity and power. It draws inspiration from **Holy C**, **Python**, **C#**, **BASIC**, and **Scratch-style programming concepts**, while delivering a unique set of features that make it universally translatable and adaptable.  
+AngloScript is a high-level programming language designed for ease of use, particularly for beginners transitioning from BASIC or Scratch. It combines elements from various programming languages, including **Holy C**, **Python**, **C#**, and **GameMaker Language**, while incorporating a unique Anglo-Saxon theme. The language aims to be modular, intuitive, and accessible, making it suitable for educational purposes and game development.
 
-AngloScript stands out due to its ability to operate in **compilable**, **non-compilable**, **JIT-based**, or even **interpreted environments**. Its flexibility means it can seamlessly translate or map its syntax into virtually any other language. This design allows AngloScript to run on platforms ranging from bare-metal systems (via low-level Assembly integration) to high-level scripting platforms like Python or Lua.
-
----
-
-## **2. Key Features**
-
-### **1. Simplicity**
-- The language is as simple as writing natural English. 
-- Uses clear, self-explanatory keywords (e.g., `mark` for variables, `write` for printing, `does` for function declaration).  
-- Its straightforward syntax ensures a minimal learning curve, even for children.
-
-### **2. Modularity**
-- Code is structured into **runes** (classes, modules, events, or interfaces).  
-- Modules enable reusable, organized codebases for complex programs.
-
-### **3. Event-Driven Programming**
-- Built-in event listeners handle triggers for interactivity.  
-- Modeled after the event-based logic found in Scratch and GameMaker.  
-
-### **4. Dynamic Typing**
-- Variables automatically adapt to their assigned values, reducing the need for explicit type declarations.
-
-### **5. Error Handling**
-- AngloScript introduces **try-catch blocks** with built-in retry mechanisms.  
-- Errors are gracefully handled, and optional fallback behaviors can be defined.
-
-### **6. External Code Integration**
-- Inline **Assembly**, **JavaScript**, and **Lua** can be embedded directly into AngloScript programs.  
-- This makes AngloScript extensible and capable of interacting with system-level operations or external libraries.
-
-### **7. Cross-Language Translatability**
-- AngloScript can be translated into any other language, including Python, C#, Lua, Assembly, and more.  
-- This feature ensures that programs written in AngloScript can run in nearly any environment.  
-
-### **8. Compilation and Execution Modes**
-- AngloScript can be:  
-  - **Compiled** into standalone binaries.  
-  - **JIT-compiled** for improved runtime performance.  
-  - **Interpreted** dynamically by host environments that support basic scripting languages.  
-
-### **9. Built-in Game Development Tools**
-- Event-driven logic, game loops, and asset management systems are integrated.  
-- These tools make it easy to create games without needing additional frameworks.  
-
-### **10. Data Structure Support**
-- Native support for **lists**, **maps**, **queues**, **stacks**, and **binary trees**.  
-- Built-in methods simplify data manipulation.  
-
-### **11. System-Level Programming**
-- Developers can access low-level system operations, including memory manipulation, via inline Assembly.  
-- System modules provide OS-level functionality like file I/O, threading, and networking.  
-
----
-
-## **3. Syntax**
+AngloScript’s syntax is designed to be incredibly intuitive, taking inspiration from various languages to balance simplicity and complexity.
 
 ### **1. Basic Program Structure**
 
 ```angloscript
-rune Main class {
+rune MyRune class {
     does main() {
         write "Hello, World!";
     }
 }
 ```
 
+This structure consists of:
+
+- **rune**: Used to declare classes, modules, or events.
+- **does**: Defines a function or method.
+- **main()**: The entry point of the program.
+- **write()**: A built-in function to output text.
+
 ### **2. Comments**
-- Single-line comments:  
-  ```angloscript
-  # This is a comment
-  ```
-- Multi-line comments:  
-  ```angloscript
-  ## This is a
-     multi-line comment ##
-  ```
 
-### **3. Variable Declarations**
-- **Mutable Variables** (`mark`):  
-  ```angloscript
-  mark score = 0;
-  ```
-- **Immutable Constants** (`bind`):  
-  ```angloscript
-  bind Pi = 3.14159;
-  ```
+- **Single-line comment**:
+```angloscript
+# This is a single-line comment
+```
 
-### **4. Control Flow**
-- **If Statements**:
-  ```angloscript
-  if x > 5 then
-      write "x is greater than 5";
-  elif x == 5 then
-      write "x equals 5";
-  else
-      write "x is less than 5";
-  ```
+- **Multi-line comment**:
+```angloscript
+## This is a multi-line comment
+   that spans across lines ##
+```
 
-- **For Loop**:
-  ```angloscript
-  loop mark i = 1 to 10 {
-      write i;
-  }
-  ```
+### **3. Declarations**
 
-- **While Loop**:
-  ```angloscript
-  while x > 0 {
-      write x;
-      x = x - 1;
-  }
-  ```
+- **Mutable Variable Declaration** (using `mark`):
+```angloscript
+mark x = 10;  # Declares a mutable variable x
+```
 
----
+- **Immutable Constant Declaration** (using `bind`):
+```angloscript
+bind Pi = 3.14159;  # Declares a constant Pi
+```
+
+### **4. Data Types**
+
+- **number**: Integer or floating point.
+- **text**: String of characters enclosed in quotation marks.
+- **boolean**: Boolean value (`True` or `False`).
+- **list**: Ordered collection, similar to arrays.
+- **map**: Unordered collection of key-value pairs (similar to dictionaries in Python).
+- **function**: A function itself can be a variable.
+
+### **5. Control Flow**
+
+- **Conditionals**:
+
+```angloscript
+if x > 10 then
+    write "Big!";
+elif x == 10 then
+    write "Exactly!";
+else
+    write "Small!";
+```
+
+- **Loops**:
+    - **For Loop**:
+    ```angloscript
+    loop mark i = 1 to 10 {
+        write i;
+    }
+    ```
+
+    - **While Loop**:
+    ```angloscript
+    while x > 0 {
+        write x;
+        x = x - 1;
+    }
+    ```
+
+### **6. Functions**
+
+- **Function Declaration**:
+
+```angloscript
+does greet(name) {
+    write "Hello, " + name;
+}
+```
+
+- **Return Values**:
+
+```angloscript
+does add(a, b) {
+    give a + b;
+}
+```
+
+### **7. Classes and Runes**
+
+- **Class Declaration** (`rune class`):
+
+```angloscript
+rune Player class {
+    has health = 100;
+    
+    does heal(amount) {
+        health = health + amount;
+    }
+}
+```
+
+- **Inheritance** (`rune class > ParentClass`):
+
+```angloscript
+rune NPC class > Player {
+    has dialogue = "Hello!";
+    does speak() {
+        write dialogue;
+    }
+}
+```
+
+### **8. Modules**
+
+- **Module Declaration**:
+
+```angloscript
+rune Math module {
+    does add(a, b) {
+        give a + b;
+    }
+}
+```
+
+- **Module Usage**:
+
+```angloscript
+mark result = Math.add(2, 3);
+```
+
+### **9. Input/Output**
+
+- **Writing to the Console**:
+
+```angloscript
+write "Hello!";
+```
+
+- **Reading User Input**:
+
+```angloscript
+mark name = ask "What is your name?";
+write "Hello, " + name;
+```
+
+### **10. Error Handling**
+
+- **Try-Catch**:
+
+```angloscript
+try {
+    mark x = 10 / 0;
+} catch Error {
+    write "Something went wrong!";
+}
+```
+
+### **11. External Code Integration**
+
+- **Embedding Assembly**:
+
+```angloscript
+asm {
+    mov eax, 10;
+}
+```
+
+- **Embedding JavaScript**:
+
+```angloscript
+js {
+    console.log("Hello from JavaScript!");
+}
+```
+
+- **Embedding Lua**:
+
+```angloscript
+lua {
+    print("Hello from Lua!");
+}
+```
+
+### **12. Built-in Modules**
+
+- **Math Module**: Includes basic arithmetic functions.
+```angloscript
+rune Math module {
+    does add(a, b) { give a + b; }
+    does subtract(a, b) { give a - b; }
+    does multiply(a, b) { give a * b; }
+    does divide(a, b) { give a / b; }
+    does round(n) { give round(n); }
+    does random(min, max) { give random(min, max); }
+}
+```
+
+## **4. Keywords Reference**
+
+| Keyword  | Purpose | Assembly Equivalent | Python Equivalent |
+|----------|---------|---------------------|-------------------|
+| mark     | Mutable variable declaration. | `mov` | `=` |
+| bind     | Immutable constant declaration. | `dw` | Constant declaration (uppercase) |
+| rune     | Class/module/event/interface keyword. | `.text` or `.data` | `class` or `import` |
+| does     | Function definition. | `label:` | `def` |
+| give     | Return value from a function. | `mov eax, return_value` | `return` |
+| write    | Print to console. | `call printf` | `print()` |
+| ask      | Get user input. | `call scanf` | `input()` |
+| loop     | Start a loop structure. | `cmp, jmp, inc/dec` | `for/while` |
+| if       | Conditional branching. | `cmp, jne` | `if` |
+| try      | Error handling block. | `cmp eax, 0` | `try:` |
+| catch    | Error handler. | `jmp catch_block` | `except:` |
+| asm      | Inline assembly. | Raw ASM | Custom integration required. |
+| js       | Inline JavaScript execution. | Not applicable. | Custom integration required. |
+
+## **5. Module Types**
+
+| AngloScript Module Type | Purpose | Assembly Equivalent | Python Equivalent |
+|--------------------------|---------|---------------------|-------------------|
+| rune [class]             | Defines a class with properties and methods. | `.data section for variables, .text for methods.` | `class MyClass:` |
+| rune [module]            | Declares a module for reusable functions. | `.text section for function logic.` | `class ModuleName: with @staticmethod` |
+| rune [interface]         | Defines a shared behavior structure. | None directly. Similar to jump tables. | Abstract base class with abc module. |
+| rune [event]             | Event listener for handling triggers. | None directly. Implemented as callbacks. | `def event_handler(event):` |
+
+## **6. AngloScript and Other Languages**
+
+### **Comparison to Python**
+
+| Feature | Python | AngloScript |
+|---------|--------|-------------|
+| Variables | Declared with `=` | `mark` for mutable variables, `bind` for constants |
+| Functions | Declared with `def` | Declared with `does` |
+| Classes | Declared with `class` | Declared with `rune` |
+| Looping | `for` / `while` loops | `loop` / `while` loops |
+| Input | `input()` | `ask` |
+| Output | `print()` | `write` |
+
+### **Comparison to Assembly**
+
+| Feature | Assembly | AngloScript |
+|---------|----------|-------------|
+| Variables | `mov eax, value` | `mark x = value` |
+| Constants | `dw CONSTANT` | `bind CONSTANT = value` |
+| Functions | Labels and `call` instructions | `does` keyword for function declaration |
+| Classes/Modules | Data sections for variables, Text sections for methods | `rune` defines classes, modules |
+| Inline Assembly | Direct inline assembly code | `asm {}` block for inline assembly |
 
 ## **7. Interpreting and Running Code**
 
 ### **Compilable and Non-Compilable Nature**
 AngloScript’s unique flexibility allows it to be executed in two primary modes:
 1. **Compiled Mode**:  
-   Code is compiled into a standalone executable binary, enabling faster execution. This is ideal for systems that require performance or standalone applications.
+   Code is compiled into a standalone executable binary, enabling faster execution. This is ideal for systems that require performance or standalone applications.  
    
 2. **Non-Compiled Mode**:  
    The code is dynamically interpreted at runtime. This is particularly useful for prototyping or running scripts in environments like web browsers, Python, or embedded systems.  
 
 ### **JIT Compatibility**
 AngloScript can leverage **Just-In-Time (JIT) compilation** to dynamically convert AngloScript code into optimized machine code during execution. This allows a balance between the flexibility of interpretation and the performance of compilation.
-
----
 
 ## **8. Advanced Features Explained**
 
@@ -207,7 +342,30 @@ AngloScript can leverage **Just-In-Time (JIT) compilation** to dynamically conve
   }
   ```
 
----
+## **9. Example Code**
+
+A simple program that prints numbers and handles user input:
+
+```angloscript
+rune MyGame class {
+    has score = 0;
+    
+    does start() {
+        write "Game Start!";
+        mark x = 10;
+        loop mark i = 1 to x {
+            write "Loop " + i;
+        }
+        does play();
+    }
+    
+    does play() {
+        write "Playing...";
+        score = score + 10;
+        write "Score: " + score;
+    }
+}
+```
 
 ## **10. Features from Holy C, Python, and BASIC**
 
@@ -226,8 +384,6 @@ AngloScript can leverage **Just-In-Time (JIT) compilation** to dynamically conve
 - Simple control flow constructs (`if`, `loop`).  
 - Built-in support for beginner-friendly programming.
 
----
-
 ## **11. AngloScript’s Unique Flexibility**
 
 AngloScript’s **universally mappable syntax** ensures its ability to run on virtually any system. Its design prioritizes **ease of use** while allowing developers to:
@@ -242,71 +398,9 @@ AngloScript’s **universally mappable syntax** ensures its ability to run on vi
 
 ## **12. Future Directions**
 
-AngloScript is designed to evolve as a **modular**, **multi-platform**, and **beginner-friendly** programming language while introducing new innovations to meet the demands of both novice and advanced programmers. The future roadmap includes the following planned features and advancements:  
-
-### **1. Visual Programming Integration**
-- Develop a visual programming IDE with a block-based editor inspired by Scratch, allowing users to write AngloScript code by assembling logic visually.  
-- Support bidirectional conversion between visual and text-based code.
-
-### **2. AI-Assisted Code Generation**
-- Integrate AI to provide real-time suggestions, debugging tips, and automated code generation, helping beginners create complex programs effortlessly.  
-- AI will analyze code contextually to ensure syntax correctness and logic flow.
-
-### **3. AngloScript WebAssembly (WASM)**
-- Compile AngloScript directly to WebAssembly for high-performance web applications.  
-- Extend the runtime to allow seamless integration with JavaScript and HTML5.
-
-### **4. Advanced Game Development Framework**
-- Expand the built-in game development tools to include:
-  - **Physics engine** for real-time simulations.  
-  - **Animation tools** for character movement.  
-  - **Asset pipeline** for importing and managing textures, sounds, and 3D models.  
-
-### **5. Native Multi-Language Support**
-- Enhance the language’s translation engine to support live conversion of AngloScript code into:
-  - **C++** for performance-critical applications.  
-  - **Ruby** and **PHP** for web development.  
-  - **Rust** for secure system-level programming.  
-
-### **6. Distributed Computing and Networking**
-- Introduce native constructs for distributed computing:
-  - `node` for defining cluster nodes.  
-  - `message` for inter-node communication.  
-  - `net` for creating client-server models.  
-
-### **7. Embedded Systems Support**
-- Optimize the interpreter and runtime for low-resource environments like microcontrollers and IoT devices.  
-- Introduce `hardware` modules for direct access to GPIO pins, sensors, and actuators.
-
-### **8. Custom Compiler Toolchain**
-- Expand the compiler to allow developers to customize the compilation process.  
-- Add support for intermediate bytecode representations for portability across different architectures.
-
-### **9. Full Unicode Support**
-- Add native Unicode support for text processing, enabling AngloScript to handle internationalization and localization seamlessly.
-
-### **10. Education-Focused Features**
-- Develop beginner-friendly IDE tutorials and interactive lessons.  
-- Include gamified programming challenges to teach concepts such as recursion, sorting algorithms, and data structures.
-
-### **11. Community-Driven Extensions**
-- Launch a plugin marketplace where developers can share and integrate community-built modules.  
-- Create a versioning system for third-party packages to ensure compatibility and reliability.
-
-### **12. Advanced AI and Machine Learning Libraries**
-- Incorporate native support for AI/ML libraries like TensorFlow or PyTorch.  
-- Add pre-built modules for data preprocessing, neural network training, and deployment.
-
-### **13. Quantum Computing Framework**
-- Research and develop a quantum simulation module to allow experimentation with quantum logic gates and algorithms.  
-
----
-
-## **Conclusion**
-
-AngloScript is not only a language but a vision for the future of programming. Its simplicity enables accessibility for beginners, while its modularity and flexibility open doors for advanced applications. With its ambitious roadmap, AngloScript aims to become a universal programming standard, blending the best features of existing languages while innovating in new domains.  
-
-Whether you’re a child writing your first line of code or an experienced developer building high-performance applications, AngloScript is your gateway to a world of possibilities.  
+- **Expanded Documentation**: Further detail on advanced features.
+- **Better Performance**: For large-scale projects and mobile/web integration.
+- **Cross-Platform Support**: Expansion to web and mobile platforms.
 
 ---
 
