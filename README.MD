@@ -1,4 +1,4 @@
-# **AngloScript Comprehensive Documentation**
+# **AngloScript Documentation**
 
 **Version 1.3**  
 **Author:** AngloScript Development Team  
@@ -58,7 +58,7 @@ AngloScript stands out due to its ability to operate in **compilable**, **non-co
 
 ---
 
-## **2. Key Features (Expanded)**
+## **2. Key Features**
 
 ### **1. Simplicity**
 - The language is as simple as writing natural English. 
